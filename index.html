@@ -171,6 +171,7 @@ section[id]{scroll-margin-top:84px}
 .course.main p{color:var(--on-navy-sub)}
 .course.main .code{color:var(--orange-l)}
 .common{margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:700}
+.common-note{margin-top:10px;font-size:14px;color:var(--sub)}
 .common .chip{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
 .common .chip .ico{width:20px;height:20px;color:var(--orange-t)}
 
@@ -217,6 +218,16 @@ section[id]{scroll-margin-top:84px}
 .sched h3{font-size:18px}
 .sched p{color:var(--sub);font-size:15px}
 .sched .big{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:22px;color:var(--navy)}
+.wide{margin-top:16px;display:flex;gap:16px;align-items:flex-start}
+@media (max-width:640px){.wide{flex-direction:column}}
+.wide h3{font-size:18px;margin-bottom:6px}
+.wide p,.wide li{color:var(--sub);font-size:15px}
+.wide ul{margin:6px 0 0;padding-left:1.2em}
+.wide .pending{display:inline-block;background:var(--peach);color:var(--orange-t);font-size:13px;font-weight:700;border-radius:6px;padding:0 8px}
+.cancel-tbl{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+.cancel-tbl th,.cancel-tbl td{border-top:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+.cancel-tbl th{font-weight:700;color:var(--navy);width:55%}
+.cancel-tbl td{color:var(--sub)}
 
 /* ---------- subsidy ---------- */
 .subsidy{background:var(--peach);border-radius:24px;padding:40px 36px}
@@ -257,7 +268,7 @@ section[id]{scroll-margin-top:84px}
 .biz p{font-size:15px;color:var(--sub)}
 .teacher{margin-top:20px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px 36px;align-items:center;padding:32px}
 @media (max-width:720px){.teacher{grid-template-columns:minmax(0,1fr);padding:24px 20px;justify-items:center;text-align:left}}
-.portrait{position:relative;width:200px;padding-top:70px}
+.portrait{position:relative;width:200px;padding-top:86px}
 .portrait img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:6px solid var(--white);box-shadow:0 0 0 3px var(--orange-l);background:#EEEAE1}
 .bubble{position:absolute;top:0;left:-6px;right:-30px;background:var(--navy);color:var(--white);font-weight:700;font-size:14px;line-height:1.5;border-radius:14px;padding:10px 14px;font-family:'Zen Kaku Gothic New',sans-serif}
 .bubble::after{content:"";position:absolute;bottom:-10px;left:64px;border:10px solid transparent;border-bottom:none;border-top-color:var(--navy)}
@@ -293,13 +304,9 @@ section[id]{scroll-margin-top:84px}
 .apply .meta .ico{color:var(--teal);width:20px;height:20px}
 .apply .meta a{color:var(--orange-l);font-weight:700;display:inline-flex;align-items:center;min-height:44px}
 
-/* ---------- other service ---------- */
-.other{display:flex;gap:16px;align-items:flex-start;border:1px dashed #BDB6A6;border-radius:var(--radius);padding:20px 22px;background:transparent}
-.other b{display:block;font-size:15px;margin-bottom:2px}
-.other p{font-size:14px;color:var(--sub);line-height:1.75}
 
 /* ---------- footer ---------- */
-.site-foot{background:var(--white);border-top:1px solid var(--line);margin-top:64px}
+.site-foot{background:var(--white);border-top:1px solid var(--line)}
 .site-foot .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px 40px;padding-top:36px;padding-bottom:36px;font-size:14px;color:var(--sub)}
 @media (max-width:720px){.site-foot .wrap{grid-template-columns:minmax(0,1fr)}}
 .site-foot dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px}
@@ -362,7 +369,6 @@ section[id]{scroll-margin-top:84px}
     <symbol id="i-stack" viewBox="0 0 24 24"><path d="m12 3 9 4.5-9 4.5-9-4.5z"/><path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5"/></symbol>
     <symbol id="i-test" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="16.5" rx="1.5"/><path d="M9 3h6v3H9zM8.5 11l1.5 1.5 2.5-2.5M14 11.5h2M8.5 16l1.5 1.5 2.5-2.5M14 16.5h2"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5C6.5 4 9.5 4 12 5.5v14c-2.5-1.5-5.5-1.5-8 0zM20 5.5c-2.5-1.5-5.5-1.5-8 0v14c2.5-1.5 5.5-1.5 8 0z"/></symbol>
-    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0zM12 16.5V21"/></symbol>
   </defs>
 </svg>
 
@@ -463,8 +469,8 @@ section[id]{scroll-margin-top:84px}
 <section id="about" class="sec" aria-labelledby="pain-title">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">物流の現場のよくある課題</span>
-      <h2 id="pain-title">こんなこと、ありませんか？</h2>
+      <span class="eyebrow">研修で扱う業務の例</span>
+      <h2 id="pain-title">研修の演習で扱う、物流の現場の業務</h2>
     </div>
     <div class="grid g4">
       <div class="card pain">
@@ -501,7 +507,8 @@ section[id]{scroll-margin-top:84px}
         <h3>数字が、月末までわからない</h3>
       </div>
     </div>
-    <p class="pain-foot"><svg class="ico" aria-hidden="true"><use href="#i-arrow-d"/></svg>こうした業務をAIで扱うための実務を、2日間で学びます</p>
+    <p class="pain-foot"><svg class="ico" aria-hidden="true"><use href="#i-arrow-d"/></svg>こうした業務をAIで扱うための技能を、模擬データの演習で学びます</p>
+    <p class="note" style="margin-top:12px;justify-content:center"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg>研修は技能を身につける場です。御社の業務の仕組みや手順書をつくるものではありません。</p>
   </div>
 </section>
 
@@ -532,7 +539,7 @@ section[id]{scroll-margin-top:84px}
       <li class="ba">
         <div class="now"><svg class="ico" aria-hidden="true"><use href="#i-warn"/></svg><span>キャンセル・追加・差異の判断が、人によってばらばら</span></div>
         <div class="arrow" aria-hidden="true"><svg class="ico r"><use href="#i-arrow-r"/></svg><svg class="ico d"><use href="#i-arrow-d"/></svg></div>
-        <div class="learn"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg></span><b>例外（キャンセル・追加・差異）の判断基準を決める考え方</b></div>
+        <div class="learn"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg></span><b>例外（キャンセル・追加・差異）の判断基準の立て方</b></div>
       </li>
     </ul>
     <p class="note" style="margin-top:6px"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg>研修で学ぶ技能を示したものです。演習はすべて模擬データで行います。</p>
@@ -544,9 +551,9 @@ section[id]{scroll-margin-top:84px}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">情報の流れ</span>
-      <h2 id="hub-title">今のツールとAIをつなぐ考え方を、模擬データで実践します</h2>
+      <h2 id="hub-title">業務の情報の流れを読み解き、AIで扱う技能を模擬データで身につけます</h2>
     </div>
-    <div class="hub" role="group" aria-label="AIを中心に、LINE、メール・FAX、表計算、会計ソフト、配車・倉庫システム、トドククラウドがつながる図">
+    <div class="hub" role="group" aria-label="AIを中心に、LINE、メール・FAX、表計算、会計ソフト、配車・倉庫システム、クラウドERPの間を業務の情報が流れる図">
       <svg class="hub-lines" viewBox="0 0 300 300" preserveAspectRatio="none" aria-hidden="true">
         <line x1="150" y1="150" x2="50" y2="40"/><line x1="150" y1="150" x2="50" y2="150"/><line x1="150" y1="150" x2="50" y2="260"/>
         <line x1="150" y1="150" x2="250" y2="40"/><line x1="150" y1="150" x2="250" y2="150"/><line x1="150" y1="150" x2="250" y2="260"/>
@@ -557,7 +564,7 @@ section[id]{scroll-margin-top:84px}
       <div class="ai-core"><svg class="ico" aria-hidden="true"><use href="#i-chip"/></svg><b>AI</b><small>整理・作成・検算</small></div>
       <div class="node n4"><span class="tile"><svg class="ico" aria-hidden="true"><use href="#i-calc"/></svg></span><span>会計ソフト<small>請求・支払の記帳</small></span></div>
       <div class="node n5"><span class="tile"><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg></span><span>配車・倉庫システム<small>運行・入出荷</small></span></div>
-      <div class="node n6"><span class="tile"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><span>トドククラウド<small>稼働・請求の管理</small></span></div>
+      <div class="node n6"><span class="tile"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><span>クラウドERP<small>請求・稼働管理</small></span></div>
     </div>
     <p class="hub-note"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span>研修では架空の物流会社のデータを使います。御社のデータは使いません。</span></p>
   </div>
@@ -608,7 +615,8 @@ section[id]{scroll-margin-top:84px}
       <div class="card course"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-calc"/></svg></span><span class="code">COURSE C</span><h3>経理・会計連携</h3><p>経理担当</p></div>
       <div class="card course"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-box"/></svg></span><span class="code">COURSE D</span><h3>倉庫・入出荷管理</h3><p>入出荷・在庫管理の担当</p></div>
     </div>
-    <div class="common"><span class="chip"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>カリキュラム・教材は全社共通</span><span style="font-weight:400;font-size:14px;color:var(--sub)">コースごとに演習の題材が変わります。</span></div>
+    <div class="common"><span class="chip"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>カリキュラム・教材・講師・受講料は全社共通</span><span style="font-weight:400;font-size:14px;color:var(--sub)">コースごとに演習の題材が変わります。</span></div>
+    <p class="common-note">研修は207株式会社が企画・主催します。受講企業のご要望で内容を変えることはありません。お選びいただけるのはコース・日程・受講者です。</p>
   </div>
 </section>
 
@@ -623,7 +631,7 @@ section[id]{scroll-margin-top:84px}
       <div class="card day">
         <div class="day-head"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><b>1日目</b><span>6時間</span></div>
         <ol class="slots">
-          <li class="slot"><span class="time">10:00<small>〜13:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg>第1時限</span><h3>物流業務の工程の整理と、AIに任せる範囲・人が判断する範囲</h3></div></li>
+          <li class="slot"><span class="time">10:00<small>〜13:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-route"/></svg>第1時限</span><h3>模擬ケース（架空の物流会社）を使った業務工程の分解と、AIに任せる範囲・人が判断する範囲の考え方</h3></div></li>
           <li class="slot rest"><span class="time">13:00<small>〜14:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg>昼休憩</span><h3>研修時間に含みません</h3></div></li>
           <li class="slot"><span class="time">14:00<small>〜17:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-chip"/></svg>第2時限</span><h3>演習：模擬データからAIで業務データを抽出・作成する。指示の設計方法</h3></div></li>
         </ol>
@@ -631,7 +639,7 @@ section[id]{scroll-margin-top:84px}
       <div class="card day">
         <div class="day-head"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><b>2日目</b><span>6時間</span></div>
         <ol class="slots">
-          <li class="slot"><span class="time">10:00<small>〜13:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>第3時限</span><h3>演習：AIの出力の検算・照合と、例外（キャンセル・追加・差異）の判断基準</h3></div></li>
+          <li class="slot"><span class="time">10:00<small>〜13:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>第3時限</span><h3>演習（模擬データ）：AIの出力の検算・照合の手法と、例外（キャンセル・追加・差異）の判断基準の立て方</h3></div></li>
           <li class="slot rest"><span class="time">13:00<small>〜14:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg>昼休憩</span><h3>研修時間に含みません</h3></div></li>
           <li class="slot"><span class="time">14:00<small>〜17:00</small></span><div class="body"><span class="label"><svg class="ico" aria-hidden="true"><use href="#i-test"/></svg>第4時限</span><h3>総合演習（架空の物流会社の1か月分のデータ）と確認テスト・講評</h3></div></li>
         </ol>
@@ -641,6 +649,7 @@ section[id]{scroll-margin-top:84px}
       <span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg></span>
       <div><b>修了の条件</b><p>研修時間の8割以上の出席と、演習課題・確認テストの提出です。</p></div>
     </div>
+    <p class="note" style="margin-top:12px"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg>各時限の途中に10分程度の小休止を含みます。定員は1回3〜15名です。</p>
   </div>
 </section>
 
@@ -659,15 +668,39 @@ section[id]{scroll-margin-top:84px}
       </div>
       <ul class="checks">
         <li><svg class="ico" aria-hidden="true"><use href="#i-check-c"/></svg><span>教材費を含みます。助成金の利用の有無にかかわらず同じ料金です</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check-c"/></svg><span>お支払いは銀行振込で、2027年1月31日までにお願いします（請求書は契約後にお送りします）</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check-c"/></svg><span>研修で使うAIツールのアカウントは御社でご用意ください（選定・準備は207がお手伝いします）</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check-c"/></svg><span>助成金の支給を保証するものではありません。支給の可否・金額は労働局の審査で決まります</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check-c"/></svg><span>お支払いは銀行振込で、2027年1月31日までにお願いします（研修がそれより後の場合も同日まで）。請求書は契約後にお送りします</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check-c"/></svg><span>研修で使うAIツールのアカウントは御社でご用意ください。利用料は御社のご負担で、受講料には含まれません。必要な環境・準備は受講案内でお知らせします</span></li>
       </ul>
     </div>
-    <div class="grid g4 sched">
-      <div class="card"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-cal-check"/></svg></span><h3>日程は会社ごとに個別調整</h3><p>日程は207が候補をお出しし、個別に調整します。助成金をご利用の場合、研修の開始は計画届の提出から1か月以上後になります。</p></div>
-      <div class="card"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><h3>受講者3名から1社で開催</h3><p>受講者3名から、御社の受講者だけで開催します。3名に満たない場合は、他社との合同開催をご案内することがあります。</p></div>
+    <div class="grid g3 sched">
+      <div class="card"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-cal-check"/></svg></span><h3>日程は会社ごとに個別調整</h3><p>207が提示する候補日からお選びいただきます。助成金をご利用の場合、研修の開始は計画届の提出から1か月以上後になります。</p></div>
+      <div class="card"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><h3>受講者3名から1社で開催</h3><p>受講者3名から、御社の受講者だけで開催します（定員15名）。3名に満たない場合は、他社との合同開催をご案内することがあります。</p></div>
       <div class="card"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-flag"/></svg></span><h3>お申込み締切</h3><p class="big">2026年12月31日</p></div>
-      <div class="card"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-laptop"/></svg></span><h3>実施方法</h3><p>オンラインのライブ配信（Zoom等）、または207が指定する会場での対面。</p></div>
+    </div>
+    <div class="card wide">
+      <span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-laptop"/></svg></span>
+      <div>
+        <h3>実施方法・会場</h3>
+        <p>207が指定する会場での対面、またはオンラインのライブ配信（Zoom等）で実施します。受講企業の事業所での開催は行いません。</p>
+        <ul>
+          <li>会場：東京都品川区西五反田7-22-17 TOCビル11階（207株式会社）、または207が指定する都内の会場（実施日程表でお知らせします）</li>
+          <li>オンラインで受講する場合は、執務スペースと区切られた会議室などで受講し、研修中は電話・LINEなどの業務対応を行わないでください。受講者ご本人の名前で接続し、カメラをオンにしてください（出席の記録に使います）。</li>
+          <li>実施日時・場所は、日程が決まり次第、書面の実施日程表でお知らせします。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card wide">
+      <span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+      <div style="flex:1;min-width:0">
+        <h3>日程の変更・キャンセル</h3>
+        <table class="cancel-tbl">
+          <tr><th scope="row">研修開始日の30日前まで</th><td>無料（日程の変更は1回まで）</td></tr>
+          <tr><th scope="row">研修開始日の29日前から8日前まで</th><td>研修費（税込）の50%</td></tr>
+          <tr><th scope="row">研修開始日の7日前から当日まで</th><td>研修費（税込）の100%</td></tr>
+        </table>
+        <p style="margin-top:8px">研修開始後の解約・欠席による返金はありません。助成金の支給の有無・金額を理由とする返金・減額は行いません。詳しくは研修実施契約書でご案内します。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -678,17 +711,17 @@ section[id]{scroll-margin-top:84px}
     <div class="subsidy">
       <div class="sec-head">
         <span class="eyebrow">国の助成金について</span>
-        <h2 id="sub-title">人材開発支援助成金の活用を想定して設計しています</h2>
+        <h2 id="sub-title">人材開発支援助成金の対象となる場合があります</h2>
       </div>
       <div class="intro">
         <span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-building"/></svg></span>
-        <p>本研修は、厚生労働省の「人材開発支援助成金（事業展開等リスキリング支援コース）」の活用を想定して設計しています。中小企業の場合、研修費の75%（受講者1名あたり上限30万円）と、所定労働時間内の受講時間1時間あたり1,000円の賃金助成が受けられる制度です。</p>
+        <p>本研修は、厚生労働省の「人材開発支援助成金（事業展開等リスキリング支援コース）」の要件を踏まえて設計しています。要件を満たした場合、中小企業は訓練経費の75%（本研修は実訓練時間10時間以上100時間未満の区分のため、受講者1名あたり上限30万円）と、所定労働時間内の受講時間1時間あたり1,000円の賃金助成の対象になります（大企業は60%・上限20万円、1時間500円）。事業内職業能力開発計画の作成・周知、職業能力開発推進者の選任、事業展開等実施計画（社内のDXの取組）など、事業主側の要件もあります。助成金の支給を保証するものではありません。</p>
       </div>
       <ul class="s-list">
         <li><span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg></span><div><b>申請は受講する会社が行います</b><p>御社（または御社が依頼する社会保険労務士）が申請します。207は研修を行う側として、必要な書類をお渡しします。</p></div></li>
-        <li><span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><b>研修開始の1か月前までに計画届</b><p>御社が労働局へ計画届を提出します。計画届は2027年3月末までに提出する必要があります（受付が3月末で終了する可能性があります）。</p></div></li>
+        <li><span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><b>計画届は研修開始日の6か月前から1か月前までの間に提出</b><p>御社が労働局へ提出します（郵送の場合は労働局に届いた日が提出日です）。本コースは雇用保険法施行規則で令和9年（2027年）3月31日までの時限措置です。計画届を2027年3月末までに提出すれば4月以降の審査でもよいとの見解を労働局から口頭で得ていますが、確約ではありません。計画届の受付が3月末で終わる可能性があります。最新の支給要領・管轄の労働局でご確認ください。</p></div></li>
         <li><span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-bank"/></svg></span><div><b>助成金は審査後の後払い</b><p>研修費はいったん全額をお支払いいただき、助成金は研修後の申請・審査を経て支給されます。支給の可否・金額は労働局の審査で決まります。</p></div></li>
-        <li><span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><div><b>雇用保険に加入している社員の方が対象</b><p>研修日は勤務日として受講してください（年次有給休暇を使った受講は対象外です）。</p></div></li>
+        <li><span class="tile n"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><div><b>雇用保険に加入している社員の方が対象</b><p>研修日は勤務日として受講してください（年次有給休暇を使った受講は対象外です）。担当業務に対応するコースの受講が必要で、受講は1人1年度3回までです。御社と207の間に親子会社・役員の兼任などの密接な関係がある場合は対象外です。</p></div></li>
       </ul>
     </div>
   </div>
@@ -703,11 +736,11 @@ section[id]{scroll-margin-top:84px}
     </div>
     <ol class="steps">
       <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span class="n">1</span></span><div class="txt"><b>お申込み</b><p>フォームから送信<br>締切 2026年12月31日</p></div></li>
-      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-contract"/></svg><span class="n">2</span></span><div class="txt"><b>日程調整・ご契約</b><p>電子契約で締結。AIツール準備のお手伝い</p></div></li>
-      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span class="n">3</span></span><div class="txt"><b>計画届の提出</b><p><span class="who you">御社</span> 助成金利用時、研修開始の1か月前までに提出</p></div></li>
-      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-bank"/></svg><span class="n">4</span></span><div class="txt"><b>お支払い</b><p>2027年1月31日までに銀行振込</p></div></li>
+      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-contract"/></svg><span class="n">2</span></span><div class="txt"><b>日程調整・ご契約</b><p>207が提示する候補日から日程を決め、電子契約で締結</p></div></li>
+      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span class="n">3</span></span><div class="txt"><b>計画届の提出</b><p><span class="who you">御社</span> 助成金利用時、研修開始日の6か月前から1か月前までに提出</p></div></li>
+      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-bank"/></svg><span class="n">4</span></span><div class="txt"><b>お支払い</b><p>2027年1月31日までに銀行振込（研修がそれより後の場合も同日まで）</p></div></li>
       <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-cert"/></svg><span class="n">5</span></span><div class="txt"><b>研修・修了</b><p>6時間×2日。出席簿・修了証などをお渡し</p></div></li>
-      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span class="n">6</span></span><div class="txt"><b>支給申請</b><p><span class="who you">御社</span> 研修終了の翌日から2か月以内に申請</p></div></li>
+      <li class="step"><span class="circle"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg><span class="n">6</span></span><div class="txt"><b>支給申請</b><p><span class="who you">御社</span> 研修終了の翌日から2か月以内に申請（厳守）</p></div></li>
     </ol>
   </div>
 </section>
@@ -720,14 +753,14 @@ section[id]{scroll-margin-top:84px}
       <h2 id="co-title">物流の現場とシステムの両方を、自社で運営しています</h2>
     </div>
     <div class="grid g3">
-      <div class="card biz"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="kicker">配送員向けアプリ</span><h3>トドクサポーター</h3><p>全国約8万人が登録</p></div>
+      <div class="card biz"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="kicker">配送員向けアプリ</span><h3>トドクサポーター</h3><p>全国約8万人が登録（2026年10月時点）</p></div>
       <div class="card biz"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><span class="kicker">物流会社向けERP</span><h3>トドククラウドインボイス</h3><p>請求・支払・稼働管理をクラウドで</p></div>
       <div class="card biz"><span class="tile o"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></span><span class="kicker">ラストワンマイル配送</span><h3>配送を自社で運営</h3><p>現場と経理をAIで回しています</p></div>
     </div>
 
     <div class="card teacher">
       <div class="portrait">
-        <p class="bubble">物流のAI化、代表の私が直接お教えします</p>
+        <p class="bubble">研修は207株式会社が企画・主催し、代表の私が講師を務めます</p>
         <img src="instructor.png" width="200" height="200" alt="講師 高柳慎也の写真">
       </div>
       <div>
@@ -752,7 +785,6 @@ section[id]{scroll-margin-top:84px}
       <details><summary><span class="q" aria-hidden="true">Q</span>自社のデータを使って演習できますか？<svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="a"><span class="q" aria-hidden="true">A</span><p>いいえ。演習はすべて207が用意する模擬データで行い、御社のデータは使いません。</p></div></details>
       <details><summary><span class="q" aria-hidden="true">Q</span>助成金が支給されなかった場合、受講料は戻りますか？<svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="a"><span class="q" aria-hidden="true">A</span><p>戻りません。受講料は助成金の支給の有無にかかわらず同じです。</p></div></details>
       <details><summary><span class="q" aria-hidden="true">Q</span>業務委託のドライバーさんや役員も受講できますか？<svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="a"><span class="q" aria-hidden="true">A</span><p>受講はできますが、助成金の対象は雇用保険に加入している従業員の方に限られます。</p></div></details>
-      <details><summary><span class="q" aria-hidden="true">Q</span>研修のあと、自社にAIを導入する相談もできますか？<svg class="ico chev" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="a"><span class="q" aria-hidden="true">A</span><p>研修とは別のサービスとして、ご希望に応じてご提案します。研修の受講は条件ではなく、受講による値引きもありません。</p></div></details>
     </div>
   </div>
 </section>
@@ -763,7 +795,7 @@ section[id]{scroll-margin-top:84px}
     <div class="apply">
       <div>
         <h2 id="apply-title">お申込み・お問い合わせ</h2>
-        <p>お申込みフォームに、会社情報・受講予定人数・コース・ご希望の時期をご入力ください。受付後、担当者より研修実施契約書・受講案内・日程候補をお送りします。</p>
+        <p>お申込みフォームに、会社情報・受講予定人数・コース・ご希望の時期をご入力ください。受付後、担当者より研修実施契約書・受講案内・日程の候補日をお送りします。</p>
       </div>
       <div class="stack">
         <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeBvxzPIvS9jwRKZFwKRptXyOlgow3mGevMycLadNs_JYKKIA/viewform" target="_blank" rel="noopener" aria-label="お申込みフォームへ（新しいタブで開きます）">お申込みフォームへ<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a>
@@ -772,17 +804,6 @@ section[id]{scroll-margin-top:84px}
           <div><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span>お問い合わせ：<a href="mailto:info@207-inc.com">info@207-inc.com</a></span></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ other service ============ -->
-<section class="wrap" aria-labelledby="other-title">
-  <div class="other">
-    <span class="tile l"><svg class="ico" aria-hidden="true"><use href="#i-plug"/></svg></span>
-    <div>
-      <b id="other-title">研修とは別のサービス</b>
-      <p>207では、研修とは別に、LINEや今お使いのツールとAIをつなぐ業務の導入支援（AIエージェントの導入・AIアシスタントの常駐）も行っています。ご希望に応じて別途ご提案します。研修の受講は条件ではなく、受講による値引きもありません。</p>
     </div>
   </div>
 </section>
